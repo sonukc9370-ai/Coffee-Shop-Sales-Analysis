@@ -230,11 +230,8 @@ LIMIT 3;
 1. **Database Setup**
 
   - Ensure you have MySQL installed on your local machine.
+  - Execute the the DROP/CREATE TABLE statements from the source code.
 
-  - Execute the schema creation script to set up the tables:
-
-SQL
-  ```sql Copy the DROP/CREATE TABLE statements from the source code```
   
 2. **Data Import**
 

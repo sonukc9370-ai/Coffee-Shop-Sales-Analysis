@@ -1,11 +1,13 @@
 # ☕ Coffee Shop Sales Analysis
 ![Coffee Shop](Images/coffeeshop_image.png)
 
-![SQL](https://img.shields.io/badge/Language-SQL-blue)
-![Database](https://img.shields.io/badge/Database-MySQL-orange)
 
 ## 📌 Project Overview
 This project involves analyzing sales data for a coffee shop chain to understand customer behavior, product performance, and city-level trends. By utilizing advanced SQL techniques, this analysis helps identify high-potential markets and optimize sales strategies.
+
+![SQL](https://img.shields.io/badge/Language-SQL-blue)
+![Database](https://img.shields.io/badge/Database-MySQL-orange)
+
 
 ## 📂 Database Schema
 The project uses four main tables:

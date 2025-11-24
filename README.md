@@ -1,4 +1,5 @@
 # ☕ Coffee Shop Sales Analysis
+![Coffee Shop](Images/coffeeshop_image.png)
 
 ![SQL](https://img.shields.io/badge/Language-SQL-blue)
 ![Database](https://img.shields.io/badge/Database-MySQL-orange)

@@ -9,6 +9,14 @@ This project involves analyzing sales data for a coffee shop chain to understand
 ![Database](https://img.shields.io/badge/Database-MySQL-orange)
 
 
+## 🛠️ Tech Stack
+- **SQL Flavor:** MySQL
+- **Concepts Used:** - Aggregations (`SUM`, `COUNT`, `ROUND`)
+  - Joins (`INNER JOIN`, `LEFT JOIN`)
+  - Window Functions (`OVER`, `RANK`, `DENSE_RANK`, `LAG`)
+  - CTEs (Common Table Expressions)
+  - 
+
 ## 📂 Database Schema
 The project uses four main tables:
 1. **City:** City demographics, population, and estimated rent.
@@ -217,10 +225,3 @@ JOIN city_sales_summary css ON ci.city_id = css.city_id
 ORDER BY css.total_sale DESC
 LIMIT 3;
 ```
-
-## 🛠️ Tech Stack
-- **SQL Flavor:** MySQL
-- **Concepts Used:** - Aggregations (`SUM`, `COUNT`, `ROUND`)
-  - Joins (`INNER JOIN`, `LEFT JOIN`)
-  - Window Functions (`OVER`, `RANK`, `DENSE_RANK`, `LAG`)
-  - CTEs (Common Table Expressions)

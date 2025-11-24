@@ -10,12 +10,12 @@ This project involves analyzing sales data for a coffee shop chain to understand
 
 
 ## 🛠️ Tech Stack
-- **SQL Flavor:** MySQL
+- **Database:** MySQL 8.0
+- **GUI:** MySQL Worbench
 - **Concepts Used:** - Aggregations (`SUM`, `COUNT`, `ROUND`)
   - Joins (`INNER JOIN`, `LEFT JOIN`)
   - Window Functions (`OVER`, `RANK`, `DENSE_RANK`, `LAG`)
   - CTEs (Common Table Expressions)
-  - 
 
 ## 📂 Database Schema
 The project uses four main tables:
@@ -225,3 +225,82 @@ JOIN city_sales_summary css ON ci.city_id = css.city_id
 ORDER BY css.total_sale DESC
 LIMIT 3;
 ```
+
+Here is the updated, complete raw Markdown source code with the How to Use section added.
+
+Copy the entire content inside the code block below.
+
+Markdown
+
+# ☕ Coffee Shop Sales Analysis
+
+![SQL](https://img.shields.io/badge/Language-SQL-blue)
+![Database](https://img.shields.io/badge/Database-MySQL-orange)
+
+## 📌 Project Overview
+This project involves analyzing sales data for a coffee shop chain to understand customer behavior, product performance, and city-level trends. By utilizing advanced SQL techniques, this analysis helps identify high-potential markets and optimize sales strategies.
+
+## 📂 Database Schema
+The project uses four main tables:
+1. **City:** City demographics, population, and estimated rent.
+2. **Customers:** Customer details and location linkage.
+3. **Products:** Coffee items and pricing.
+4. **Sales:** Transactional data including dates, totals, and ratings.
+
+### Entity Relationship Diagram
+```mermaid
+erDiagram
+    CITY ||--|{ CUSTOMERS : "has"
+    CUSTOMERS ||--|{ SALES : "makes"
+    PRODUCTS ||--|{ SALES : "contains"
+    
+    CITY {
+        int city_id PK
+        string city_name
+        bigint population
+        float estimated_rent
+    }
+    CUSTOMERS {
+        int customer_id PK
+        string customer_name
+        int city_id FK
+    }
+    PRODUCTS {
+        int product_id PK
+        string product_name
+        float price
+    }
+    SALES {
+        int sale_id PK
+        date sale_date
+        int product_id FK
+        int customer_id FK
+        float total
+        int rating
+    }
+```
+
+## 🚀 How to Use
+1. **Database Setup**
+
+  - Ensure you have MySQL installed on your local machine.
+
+  - Execute the schema creation script to set up the tables:
+
+SQL
+  -- Copy the DROP/CREATE TABLE statements from the source code
+  
+2. **Data Import**
+
+  - The data is provided in CSV format.
+  - Use the MySQL Import Wizard (in MySQL Workbench) or the LOAD DATA INFILE command to import the datasets into their respective tables:
+
+    - `city.csv` → `city` table
+    - `customers.csv` → `customers` table
+    - `products.csv` → `products` table
+    - `sales.csv` → `sales` table
+
+3. **Run Analysis**
+
+  - Open your preferred SQL client (e.g., MySQL Workbench, DBeaver).
+  - Execute the queries listed below to view the analysis results.
